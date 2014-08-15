@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 
+import com.leigo.qsbk.app.R;
+
 /**
  * Created by Administrator on 2014/8/15.
  */
@@ -20,13 +22,20 @@ public abstract class BaseActionBarActivity extends ActionBarActivity {
 
     protected abstract String getCustomTitle();
 
+    protected abstract void onInit(Bundle paramBundle);
+
+    protected void setTheme() {
+        setTheme(R.style.Theme_Light);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme();
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         view = LayoutInflater.from(this).inflate(getResource(), null);
         setContentView(view);
-
+        onInit(savedInstanceState);
         if (!TextUtils.isEmpty(getCustomTitle())) {
             getSupportActionBar().setDisplayShowTitleEnabled(true);
             getSupportActionBar().setTitle(getCustomTitle());

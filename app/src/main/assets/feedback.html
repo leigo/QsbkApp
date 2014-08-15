@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+        <title>用户反馈</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <script language="javascript">
+	     function checkform(submitButton)
+		   {
+		      submitButton.value='正在发送...';
+		      var sourceValue=document.feedbackFrom.content.value;
+			  if(sourceValue==""||sourceValue==null)
+			    {
+				   alert("您还没有输入反馈信息哦！"); 
+				   submitButton.value='发送反馈';
+				   return false;
+				}
+		   }
+	</script>
+    <body class="feedback #ThemeStyle#">        
+        <form action="#PH_FEEDBACK_URL#" method="post" name="feedbackFrom" style="padding-right:13px;">
+            <div class="input-row">
+                <span>您的想法和建议：</span>
+                <textarea name="content" rows="4" maxlength="140"></textarea>
+            </div>
+            <div class="contact-row">
+                <span>联系方式(QQ或者邮箱)：(可选)</span>
+                <input name="contact" type="email"></input> 
+            </div>
+            <input name="source" style="display:none;" value="#PH_SOURCE#">
+            <input name="device" style="display:none;" value="#PH_DEVICE#">
+            <input name="userid" style="display:none;" value="#PH_USERID#">   
+                <div class="button"><input type="submit" value="发送反馈" onclick="result = checkform(this);return result;"></div>
+        </form>
+
+        <p>欢迎加入 App内测讨论群： 274070027</p>
+    </body>
+</html>

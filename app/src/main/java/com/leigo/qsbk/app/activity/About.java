@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
@@ -23,14 +24,15 @@ import java.io.InputStream;
  */
 public class About extends BaseActionBarActivity {
 
+    private static final String TAG = About.class.getSimpleName();
+
     WebView mWebView;
 
     private String data;
     private String targetPage;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onInit(Bundle savedInstanceState) {
         setActionbarBackable();
         targetPage = getIntent().getStringExtra("targetPage");
         mWebView = (WebView) findViewById(R.id.about);
@@ -80,10 +82,11 @@ public class About extends BaseActionBarActivity {
 
     @Override
     protected String getCustomTitle() {
+        Log.d(TAG, targetPage);
         if ("about".equals(targetPage)) {
-            return getString(R.string.about);
+            return getString(R.string.title_about);
         } else {
-            return getString(R.string.feedback);
+            return getString(R.string.title_feedback);
         }
     }
 
@@ -103,7 +106,15 @@ public class About extends BaseActionBarActivity {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
+        }else {
+            try {
+                data = readData(getAssets().open("feedback.html"), "UTF-8");
+                data = data.replace("#PH_FEEDBACK_URL#", "http://m2.qiushibaike.com/feedback");
+                data = data.replace("#PH_SOURCE#", "android_" + Constants.versionName);
+                mWebView.loadDataWithBaseURL("file:///android_asset/", data, "text/html", "utf-8", null);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 

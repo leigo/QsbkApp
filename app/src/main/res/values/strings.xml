@@ -12,5 +12,7 @@
     <string name="about">关于</string>
     <string name="dialog_btn_confirm">确定</string>
     <string name="dialog_btn_cancel">取消</string>
+    <string name="title_about">关于糗百</string>
+    <string name="title_feedback">意见反馈</string>
 
 </resources>
