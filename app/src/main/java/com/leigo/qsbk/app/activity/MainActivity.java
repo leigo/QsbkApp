@@ -1,9 +1,8 @@
 package com.leigo.qsbk.app.activity;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -15,7 +14,7 @@ public class MainActivity extends BaseActionBarActivity {
 
     @Override
     protected int getResource() {
-        return R.layout.activity_main;
+        return R.layout.main_activity;
     }
 
     @Override
