@@ -5,4 +5,120 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme_Start" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Theme_Start_Promote" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowBackground">@drawable/splash_bg_promote</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Day" parent="@style/Theme.Light">
+        <item name="main_bg">@style/day_main_background</item>
+    </style>
+
+    <style name="day_main_background">
+        <item name="android:background">@color/main_bg</item>
+    </style>
+
+    <style name="shareActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/tran_in_out</item>
+        <item name="android:activityCloseExitAnimation">@anim/disappear</item>
+    </style>
+
+    <style name="AppTheme.share" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowAnimationStyle">@style/shareActivity</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+
+    <style name="AppTheme.share.new" parent="@style/AppTheme.share">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="shareTextItem">@style/ShareTextItemStyle</item>
+    </style>
+
+    <style name="ShareTextItemStyle">
+        <item name="android:textColor">@color/light_text</item>
+        <item name="android:background">@drawable/light_item</item>
+    </style>
+
+    <style name="Theme.Light" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Light</item>
+        <item name="actionOverflowButtonStyle">@style/ActionOverflowButtonBar.Light</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Light</item>
+        <item name="actionBarItemBackground">@drawable/actionbar_item_background_light</item>
+        <item name="homeAsUpIndicator">@drawable/ic_arrow_left_padding</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Light</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Light</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_light</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_light</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Light</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Light</item>
+        <item name="xlistview_header_arrow">@style/day_header_arrow</item>
+    </style>
+
+    <style name="day_header_arrow">
+        <item name="android:src">@drawable/xlistview_arrow</item>
+    </style>
+
+    <style name="ActionOverflowButtonBar.Light" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/actionbar_over_flow_menu</item>
+    </style>
+
+    <style name="ActionBar.Solid.Light" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="titleTextStyle">@style/TextView.Title.Light</item>
+        <item name="background">@color/ic_action_bar_item_normal</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_light</item>
+    <!--    <item name="backgroundSplit">@drawable/ab_bottom_solid_meizu</item> -->
+        <item name="progressBarStyle">@style/ProgressBar.Light</item>
+        <item name="indeterminateProgressStyle">@style/IndeterminateProgress.Small</item>
+    </style>
+
+    <style name="PopupMenu.Light" parent="@style/Widget.AppCompat.Light.PopupMenu">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_light</item>
+    </style>
+
+    <style name="DropDownListView.Light" parent="@style/Widget.AppCompat.Light.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_light</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Light" parent="@style/Widget.AppCompat.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_light</item>
+    </style>
+
+    <style name="DropDownNav.Light" parent="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_light</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_light</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_light</item>
+    </style>
+
+    <style name="TextView.Title.Light" parent="@android:style/TextAppearance.WindowTitle">
+        <item name="android:textSize">@dimen/g_txt_big</item>
+        <item name="android:textColor">@color/g_txt_big</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Light" parent="@style/Widget.AppCompat.Light.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_light</item>
+    </style>
+
+    <style name="IndeterminateProgress.Small" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:maxWidth">@dimen/ab_progress_bar_size_small</item>
+        <item name="android:maxHeight">@dimen/ab_progress_bar_size_small</item>
+        <item name="android:minWidth">@dimen/ab_progress_bar_size_small</item>
+        <item name="android:minHeight">@dimen/ab_progress_bar_size_small</item>
+    </style>
+
+    <style name="ProgressBar.Light" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_light</item>
+    </style>
+
 </resources>

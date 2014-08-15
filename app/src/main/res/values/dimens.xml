@@ -2,4 +2,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="g_txt_big">18.0dip</dimen>
+    <dimen name="ab_progress_bar_size_small">24.0dip</dimen>
 </resources>

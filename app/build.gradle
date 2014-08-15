@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "com.leigo.qsbk.app"
         minSdkVersion 8
-        targetSdkVersion 20
+        targetSdkVersion 15
         versionCode 65
         versionName "3.0.5"
     }
@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 
 dependencies {
