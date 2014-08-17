@@ -22,7 +22,7 @@ public abstract class BaseActionBarActivity extends ActionBarActivity {
 
     protected abstract String getCustomTitle();
 
-    protected abstract void onInit(Bundle paramBundle);
+    protected abstract void onInit(Bundle savedInstanceState);
 
     protected void setTheme() {
         setTheme(R.style.Theme_Light);

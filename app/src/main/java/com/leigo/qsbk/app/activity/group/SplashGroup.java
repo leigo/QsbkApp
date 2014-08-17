@@ -32,7 +32,7 @@ public class SplashGroup extends FragmentActivity {
         public void run() {
             Intent intent = new Intent(SplashGroup.this, MainActivity.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.appear, R.anim.disappear);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             finish();
         }
     }

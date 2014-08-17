@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="?setting_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip"
+            android:paddingBottom="12.0dip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2.0dip"
+                android:layout_marginTop="32.0dip"
+                style="?setting_divide_line" />
+
+            <com.leigo.qsbk.app.widget.SettingItem
+                android:id="@+id/cacheSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:subTitle="0.19M"
+                app:mainTitle="清除缓存" />
+
+            <com.leigo.qsbk.app.widget.SettingItem
+                android:id="@+id/textSizeCurrent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:subTitle="中"
+                app:mainTitle="字号大小" />
+
+            <com.leigo.qsbk.app.widget.SettingItem
+                android:id="@+id/loadway"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:subTitle="自动"
+                app:mainTitle="图片加载方式" />
+
+            <com.leigo.qsbk.app.widget.SettingItem
+                android:id="@+id/isReceiveMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mainTitle="接受推送消息"
+                app:showCheckbox="true"
+                app:showDivide="false" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2.0dip"
+                android:layout_marginTop="20.0dip"
+                style="?setting_divide_line" />
+
+            <com.leigo.qsbk.app.widget.SettingItem
+                android:id="@+id/feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mainTitle="意见反馈" />
+
+            <com.leigo.qsbk.app.widget.SettingItem
+                android:id="@+id/marketComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mainTitle="果断点赞" />
+
+            <com.leigo.qsbk.app.widget.SettingItem
+                android:id="@+id/versioncheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mainTitle="新版本检测" />
+
+            <com.leigo.qsbk.app.widget.SettingItem
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mainTitle="关于糗百"
+                app:showDivide="false" />
+
+            <ImageView
+                android:id="@+id/logoutDivider"
+                android:layout_width="match_parent"
+                android:layout_height="2.0dip"
+                android:layout_marginTop="20.0dip"
+                style="?setting_divide_line" />
+
+            <com.leigo.qsbk.app.widget.SettingItem
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mainTitle="退出登录"
+                app:showDivide="false" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

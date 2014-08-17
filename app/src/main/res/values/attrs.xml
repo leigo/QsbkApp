@@ -59,10 +59,6 @@
     <attr name="nearby_btn" format="reference" />
     <attr name="nearby_icon_location" format="reference" />
     <attr name="edit_txt" format="reference" />
-    <attr name="subTitle" format="string" />
-    <attr name="mainTitle" format="string" />
-    <attr name="showCheckbox" format="boolean" />
-    <attr name="showDivide" format="boolean" />
     <attr name="leftIcon" format="reference" />
     <attr name="bgColor" format="color" />
     <attr name="rightIcon" format="reference" />
@@ -224,4 +220,10 @@
     <attr name="ptrDrawableTop" format="reference" />
     <attr name="ptrDrawableBottom" format="reference" />
     <attr name="vpiTabPageIndicatorStyle" format="reference" />
+    <declare-styleable name="SettingItem">
+        <attr name="subTitle" format="string" />
+        <attr name="mainTitle" format="string" />
+        <attr name="showCheckbox" format="boolean" />
+        <attr name="showDivide" format="boolean" />
+    </declare-styleable>
 </resources>

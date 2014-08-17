@@ -5,4 +5,8 @@
 
     <dimen name="g_txt_big">18.0dip</dimen>
     <dimen name="ab_progress_bar_size_small">24.0dip</dimen>
+    <dimen name="profile_header_tab_fading_edge_length">60.0dip</dimen>
+    <dimen name="actionbar_height">48.0dip</dimen>
+    <dimen name="actionbar_navigation_item_width">48.0dip</dimen>
+    <dimen name="message_tip">10.0dip</dimen>
 </resources>

@@ -22,6 +22,43 @@
         <item name="main_bg">@style/day_main_background</item>
     </style>
 
+    <style name="Setting" parent="@style/Day">
+        <item name="setting_divide_line">@style/day_setting_divide_line</item>
+        <item name="setting_head">@style/day_setting_head</item>
+        <item name="setting_item">@style/day_setting_item</item>
+        <item name="setting_sub_item">@style/day_setting_sub_item</item>
+        <item name="setting_sub_divide_line">@style/day_setting_sub_divide_line</item>
+    </style>
+
+    <style name="setting_txt_padding">
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingBottom">5.0dip</item>
+    </style>
+
+    <style name="day_setting_item" parent="@style/setting_txt_padding">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">#ff666666</item>
+        <item name="android:layout_marginTop">5.0dip</item>
+    </style>
+
+    <style name="day_setting_head" parent="@style/setting_txt_padding">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff000000</item>
+    </style>
+
+    <style name="day_setting_sub_item" parent="@style/setting_txt_padding">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">#ff969696</item>
+    </style>
+
+    <style name="day_setting_divide_line">
+        <item name="android:background">#ffcccccc</item>
+    </style>
+
+    <style name="day_setting_sub_divide_line">
+        <item name="android:background">#ffcccccc</item>
+    </style>
+
     <style name="day_main_background">
         <item name="android:background">@color/main_bg</item>
     </style>
