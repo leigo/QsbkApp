@@ -20,7 +20,20 @@
 
     <style name="Day" parent="@style/Theme.Light">
         <item name="main_bg">@style/day_main_background</item>
+        <item name="setting_bg">@color/white</item>
         <item name="psts">@style/day_psts</item>
+        <item name="flowBottomBg">@color/ic_action_bar_item_normal_alpha</item>
+        <item name="flowBottomDivider">@color/bottom_bar_divider_day</item>
+        <item name="flowBottomBgSelector">@drawable/profile_bottom_btn_selector</item>
+        <item name="flowBottomMsg">@drawable/ic_message_select</item>
+        <item name="flowBottomTextColor">@color/g_txt_big</item>
+        <item name="flowBottomReport">@drawable/ic_report</item>
+        <item name="iconQiushiListBottomBar">@style/day_iconQiushiListBottomBar</item>
+    </style>
+
+    <style name="day_iconQiushiListBottomBar">
+        <item name="icon1">@drawable/submit</item>
+        <item name="icon2">@drawable/examine</item>
     </style>
 
     <style name="Setting" parent="@style/Day">
@@ -41,6 +54,7 @@
         <item name="android:background">@color/psts_bg</item>
         <item name="pstsIndicatorColor">@color/psts_bg_tab_selected</item>
     </style>
+
     <style name="day_setting_item" parent="@style/setting_txt_padding">
         <item name="android:textSize">18.0dip</item>
         <item name="android:textColor">#ff666666</item>

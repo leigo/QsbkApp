@@ -58,6 +58,7 @@ public abstract class BaseActionBarActivity extends ActionBarActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setDisplayUseLogoEnabled(false);
             actionBar.setHomeButtonEnabled(true);
+            actionBar.setDisplayShowHomeEnabled(false);
         }
     }
 

@@ -9,4 +9,6 @@
     <dimen name="actionbar_height">48.0dip</dimen>
     <dimen name="actionbar_navigation_item_width">48.0dip</dimen>
     <dimen name="message_tip">10.0dip</dimen>
+    <dimen name="padding_small">8.0dip</dimen>
+    <dimen name="g_divider_small">0.5dip</dimen>
 </resources>

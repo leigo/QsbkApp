@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="?flowBottomBg"
+    android:layout_width="match_parent"
+    android:layout_height="48.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48.0dip">
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:id="@+id/button1"
+            android:background="?flowBottomBgSelector"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/id_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:textSize="@dimen/g_txt_big"
+                android:textColor="?flowBottomTextColor"
+                android:gravity="center"
+                android:id="@+id/id_txt"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_small" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/divide1"
+            android:background="?flowBottomBg"
+            android:paddingTop="12.0dip"
+            android:paddingBottom="12.0dip"
+            android:visibility="gone"
+            android:layout_width="1.0dip"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_gravity="center"
+                android:background="?flowBottomDivider"
+                android:layout_width="@dimen/g_divider_small"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/button2"
+            android:background="?flowBottomBgSelector"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@id/id_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:textSize="@dimen/g_txt_big"
+                android:textColor="?flowBottomTextColor"
+                android:gravity="center"
+                android:id="@id/id_txt"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_small" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/divide2"
+            android:background="?flowBottomBg"
+            android:paddingTop="12.0dip"
+            android:paddingBottom="12.0dip"
+            android:visibility="gone"
+            android:layout_width="1.0dip"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_gravity="center"
+                android:background="?flowBottomDivider"
+                android:layout_width="@dimen/g_divider_small"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/button3"
+            android:background="?flowBottomBgSelector"
+            android:visibility="gone"
+            android:layout_width="0.0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@id/id_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:textSize="@dimen/g_txt_big"
+                android:textColor="?flowBottomTextColor"
+                android:gravity="center"
+                android:id="@id/id_txt"
+                android:clickable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding_small" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:background="@color/alpha_white_mask_20_percent"
+        android:layout_width="match_parent"
+        android:layout_height="1.0dip"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

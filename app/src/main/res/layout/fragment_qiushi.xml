@@ -23,4 +23,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/tabs" />
+
+    <com.leigo.qsbk.app.widget.BottomOperationBar
+        android:id="@+id/id_bottom_bar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:txt1="投稿"
+        app:txt2="审帖"
+        style="?iconQiushiListBottomBar" />
 </RelativeLayout>

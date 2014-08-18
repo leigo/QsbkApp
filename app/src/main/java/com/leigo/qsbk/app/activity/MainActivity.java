@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.leigo.qsbk.app.QsbkApp;
 import com.leigo.qsbk.app.R;
 import com.leigo.qsbk.app.activity.base.BaseActionBarActivity;
 import com.leigo.qsbk.app.fragments.ActionBarFragmentTabHost;
@@ -22,6 +25,8 @@ import com.leigo.qsbk.app.widget.ActionBarTabPanel;
 public class MainActivity extends BaseActionBarActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
+
+    private long mExitTime = 0;
 
     public static final String SELECTED_PAGE_ID = "selected_page";
     public static final String SELECTED_TAB_ID = "selected_tab";
@@ -140,5 +145,20 @@ public class MainActivity extends BaseActionBarActivity {
         intent.putExtra("targetPage", "about");
         startActivity(intent);
         overridePendingTransition(R.anim.roll_up, R.anim.still_when_up);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            if ((System.currentTimeMillis() - mExitTime) > 800L) {
+                Toast.makeText(this, "再按一次返回键退出", Toast.LENGTH_SHORT).show();
+                mExitTime = System.currentTimeMillis();
+            } else {
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

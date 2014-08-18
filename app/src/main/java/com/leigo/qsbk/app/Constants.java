@@ -6,4 +6,5 @@ package com.leigo.qsbk.app;
 public class Constants {
 
     public static String versionName = "2.8.7";
+    public static final String TEXT = "http://m2.qiushibaike.com/article/list/text";
 }
