@@ -16,6 +16,7 @@ public class MessageListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_main, container, false);
+        View view = inflater.inflate(R.layout.activity_messagelist, null);
+        return view;
     }
 }

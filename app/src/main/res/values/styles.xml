@@ -20,6 +20,7 @@
 
     <style name="Day" parent="@style/Theme.Light">
         <item name="main_bg">@style/day_main_background</item>
+        <item name="psts">@style/day_psts</item>
     </style>
 
     <style name="Setting" parent="@style/Day">
@@ -35,6 +36,11 @@
         <item name="android:paddingBottom">5.0dip</item>
     </style>
 
+    <style name="day_psts">
+        <item name="android:textColor">@color/g_txt_middle</item>
+        <item name="android:background">@color/psts_bg</item>
+        <item name="pstsIndicatorColor">@color/psts_bg_tab_selected</item>
+    </style>
     <style name="day_setting_item" parent="@style/setting_txt_padding">
         <item name="android:textSize">18.0dip</item>
         <item name="android:textColor">#ff666666</item>

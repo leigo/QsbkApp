@@ -12,10 +12,12 @@ import com.leigo.qsbk.app.R;
 /**
  * Created by Administrator on 2014/8/16.
  */
-public class NearbyListFragment extends Fragment {
+public class NearbyListFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_main, container, false);
+        View view = inflater.inflate(R.layout.activity_nearby_list, null);
+        return view;
     }
+
 }

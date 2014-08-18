@@ -238,4 +238,5 @@
     <color name="munion_indicator_background">#ffe7e7e7</color>
     <color name="munion_indicator_text_color">#ff898989</color>
     <color name="munion_indicator_text_color_selected">#ffe42c38</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
 </resources>

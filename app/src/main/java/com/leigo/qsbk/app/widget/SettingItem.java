@@ -27,10 +27,10 @@ public class SettingItem extends RelativeLayout {
 
     private void init(Context context, AttributeSet attrs) {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.SettingItem, 0, 0);
-        String mainTitle = typedArray.getString(1);
-        String subTitle = typedArray.getString(0);
-        boolean showCheckbox = typedArray.getBoolean(2, false);
-        boolean showDivide = typedArray.getBoolean(3, true);
+        String mainTitle = typedArray.getString(R.styleable.SettingItem_mainTitle);
+        String subTitle = typedArray.getString(R.styleable.SettingItem_subTitle);
+        boolean showCheckbox = typedArray.getBoolean(R.styleable.SettingItem_showCheckbox, false);
+        boolean showDivide = typedArray.getBoolean(R.styleable.SettingItem_showDivide, true);
         setTitle(mainTitle);
         if (!TextUtils.isEmpty(subTitle)) {
             setSubTitle(subTitle);
