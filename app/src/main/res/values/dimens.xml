@@ -11,4 +11,13 @@
     <dimen name="message_tip">10.0dip</dimen>
     <dimen name="padding_small">8.0dip</dimen>
     <dimen name="g_divider_small">0.5dip</dimen>
+    <dimen name="g_txt_small">14.0dip</dimen>
+    <dimen name="g_corner_small">2.0dip</dimen>
+    <dimen name="profile_item_margin">10.0dip</dimen>
+    <dimen name="image_avatar_size_large">42.0dip</dimen>
+    <dimen name="title_size">20.0sp</dimen>
+    <dimen name="content">18.0sp</dimen>
+    <dimen name="user_name">18.0sp</dimen>
+    <dimen name="tag">14.0sp</dimen>
+    <dimen name="vote">15.5sp</dimen>
 </resources>

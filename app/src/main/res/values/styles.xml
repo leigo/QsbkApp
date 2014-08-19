@@ -29,6 +29,67 @@
         <item name="flowBottomTextColor">@color/g_txt_big</item>
         <item name="flowBottomReport">@drawable/ic_report</item>
         <item name="iconQiushiListBottomBar">@style/day_iconQiushiListBottomBar</item>
+        <item name="article_item_bg">@style/day_article_item_bg</item>
+        <item name="listitem_usericon">@style/day_listitem_usericon</item>
+        <item name="listitem_username">@style/day_listitem_username</item>
+        <item name="listitem_content">@style/day_listitem_content</item>
+        <item name="listitem_footer">#ffcccccc</item>
+        <item name="listitem_comment">@style/day_listitem_comment</item>
+        <item name="article_support">@style/day_article_support</item>
+        <item name="article_unsupport">@style/day_article_unsupport</item>
+        <item name="article_comment">@style/day_article_comment</item>
+        <item name="article_more">@style/day_article_more</item>
+        <!--<item name="listitem_bg">@style/day_listitem_bg</item>-->
+        <item name="imageMask">@style/day_imageMask</item>
+    </style>
+
+    <style name="day_article_support">
+        <item name="android:src">@drawable/operation_support_src_selector</item>
+    </style>
+
+    <style name="day_article_unsupport">
+        <item name="android:src">@drawable/operation_unsupport_src_selector</item>
+    </style>
+
+    <style name="day_article_comment">
+        <item name="android:src">@drawable/operation_comments</item>
+    </style>
+
+    <style name="day_article_more">
+        <item name="android:src">@drawable/operation_more</item>
+    </style>
+
+    <style name="day_imageMask">
+        <item name="android:src">@color/transparent</item>
+    </style>
+
+    <style name="day_article_item_bg">
+        <item name="android:background">@drawable/items_card</item>
+    </style>
+
+    <style name="day_listitem_bg">
+        <item name="android:background">@drawable/listview_item_background</item>
+    </style>
+
+    <style name="day_listitem_content">
+        <item name="android:textSize">@dimen/content</item>
+        <item name="android:textColor">@color/content</item>
+        <item name="android:lineSpacingExtra">1.5dip</item>
+    </style>
+
+    <style name="day_listitem_comment">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">#ff969696</item>
+    </style>
+
+    <style name="day_listitem_username">
+        <item name="android:textSize">@dimen/user_name</item>
+        <item name="android:textColor">#ff3b3d42</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:maxWidth">248.0dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1.0</item>
     </style>
 
     <style name="day_iconQiushiListBottomBar">
@@ -128,6 +189,11 @@
 
     <style name="day_header_arrow">
         <item name="android:src">@drawable/xlistview_arrow</item>
+    </style>
+
+    <style name="day_listitem_usericon">
+        <item name="android:src">@drawable/default_users_avatar</item>
+        <item name="android:scaleType">centerCrop</item>
     </style>
 
     <style name="ActionOverflowButtonBar.Light" parent="@style/Widget.AppCompat.ActionButton.Overflow">

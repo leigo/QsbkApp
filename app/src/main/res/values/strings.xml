@@ -14,5 +14,9 @@
     <string name="dialog_btn_cancel">取消</string>
     <string name="title_about">关于糗百</string>
     <string name="title_feedback">意见反馈</string>
+    <string name="description_user_avatar">用戶頭像</string>
+    <string name="description_listview_top_shadow">列表顶部的阴影条</string>
+    <string name="new_list">有新糗事，点击查看</string>
+    <string name="points_and_count">%1$s 好笑 · %2$s 评论</string>
 
 </resources>

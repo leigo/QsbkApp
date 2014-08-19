@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@null"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/mainLayout"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/profile_item_margin"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginRight="@dimen/profile_item_margin"
+        style="?article_item_bg">
+
+        <RelativeLayout
+            android:id="@+id/userInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginBottom="-7.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+
+            <com.leigo.qsbk.app.widget.CircleImageView
+                android:id="@+id/userIcon"
+                android:layout_width="@dimen/image_avatar_size_large"
+                android:layout_height="@dimen/image_avatar_size_large"
+                android:src="@drawable/default_users_avatar"
+                android:layout_alignParentLeft="true"
+                android:contentDescription="@string/description_user_avatar"
+                style="@style/day_listitem_usericon" />
+
+            <com.leigo.qsbk.app.widget.CircleImageView
+                android:drawingCacheQuality="low"
+                android:layout_width="@dimen/image_avatar_size_large"
+                android:layout_height="@dimen/image_avatar_size_large"
+                android:layout_alignLeft="@id/userIcon"
+                android:layout_alignTop="@id/userIcon"
+                android:contentDescription="@null"
+                style="?imageMask" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:layout_toRightOf="@id/userIcon"
+                android:layout_centerVertical="true"
+                style="?listitem_username" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginTop="19.0dip"
+            android:layout_marginRight="8.0dip"
+            android:layout_below="@id/userInfo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignWithParentIfMissing="true">
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?listitem_content" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.0dip"
+            android:layout_below="@id/contentLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignWithParentIfMissing="true">
+
+            <ImageView
+                android:id="@+id/image"
+                android:drawingCacheQuality="low"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:minHeight="60.0dip"
+                android:contentDescription="@null" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:indeterminate="true"
+                android:layout_alignLeft="@id/image"
+                android:layout_alignTop="@id/image"
+                android:layout_alignRight="@id/image"
+                style="?attr/progressbar_image_loading" />
+
+            <ImageView
+                android:drawingCacheQuality="low"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="60.0dip"
+                android:layout_alignTop="@id/image"
+                android:layout_alignBottom="@id/image"
+                android:contentDescription="@null"
+                style="?imageMask" />
+
+            <TextView
+                android:textColor="#ffad9883"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/imageLoading"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="点击加载图片"
+                android:layout_alignLeft="@id/image"
+                android:layout_alignTop="@id/image"
+                android:layout_alignRight="@id/image"
+                android:layout_alignBottom="@id/image" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/points_and_comments_count_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_below="@id/imageLayout">
+
+            <TextView
+                android:id="@+id/points_and_comments_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                style="?listitem_comment" />
+
+            <TextView
+                android:textSize="@dimen/g_txt_small"
+                android:textColor="@color/g_txt_small"
+                android:id="@+id/location"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="12.0dip"
+                android:drawableLeft="@drawable/ic_location_small"
+                android:drawablePadding="8.0dip"
+                android:layout_alignTop="@id/points_and_comments_count"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:id="@+id/operation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="63.0dip"
+            android:layout_below="@id/points_and_comments_count_layout">
+
+            <com.leigo.qsbk.app.widget.HighlightableImageButton
+                android:id="@+id/support"
+                android:background="@null"
+                android:focusable="false"
+                android:layout_width="63.0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="9.0dip"
+                android:scaleType="fitXY"
+                style="?article_support" />
+
+            <com.leigo.qsbk.app.widget.HighlightableImageButton
+                android:id="@+id/unsupport"
+                android:tag="enable"
+                android:background="@null"
+                android:focusable="false"
+                android:layout_width="63.0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="9.0dip"
+                android:scaleType="fitXY"
+                style="?article_unsupport" />
+
+            <ImageButton
+                android:id="@+id/comment"
+                android:background="@drawable/operation_support_bg_selector"
+                android:focusable="false"
+                android:layout_width="63.0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="9.0dip"
+                android:scaleType="fitXY"
+                style="?article_comment" />
+
+            <View
+                android:background="@null"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0" />
+
+            <ImageButton
+                android:layout_gravity="right"
+                android:id="@+id/collection_icon"
+                android:tag="enable"
+                android:background="@drawable/operation_support_bg_selector"
+                android:focusable="false"
+                android:layout_width="63.0dip"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                style="?article_more" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layerMask"
+        android:background="@drawable/edit_info_items_card_mask"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/profile_item_margin"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginRight="@dimen/profile_item_margin" />
+</FrameLayout>
