@@ -1,5 +1,7 @@
 package com.leigo.qsbk.app.model;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2014/8/19.
  */
@@ -8,7 +10,7 @@ public class Article {
     public long published_at;
     public String tag;
     public User user;
-    public String image_size;
+    public ImageSize image_size;
     public String id;
     public Votes votes;
     public long create_at;

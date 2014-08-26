@@ -23,24 +23,22 @@ import org.json.JSONObject;
 
 import java.util.List;
 
-
 /**
- * 纯文
- * Created by Administrator on 2014/8/18.
+ * 最新
+ * Created by Administrator on 2014/8/26.
  */
-public class HotTextFragment extends Fragment {
+public class LatestFragment extends Fragment {
 
-    private static final String TAG = HotTextFragment.class.getSimpleName();
+    private static final String TAG = LatestFragment.class.getSimpleName();
 
     private ArticleAdapter mAdapter;
 
     private ListView xListView;
 
-    public static HotTextFragment newInstance() {
-        HotTextFragment f = new HotTextFragment();
+    public static Fragment newInstance() {
+        LatestFragment f = new LatestFragment();
         return f;
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -52,8 +50,9 @@ public class HotTextFragment extends Fragment {
         return view;
     }
 
+
     private void initData() {
-        JsonObjectRequest req = new JsonObjectRequest(Constants.TEXT, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest req = new JsonObjectRequest(Constants.LATEST, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 Gson gson = new Gson();

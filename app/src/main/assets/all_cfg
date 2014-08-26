@@ -1,0 +1,7 @@
+#
+#Thu Jul 31 18:40:56 CST 2014
+showGuide=0
+debug=false
+channel=6
+promote_channels=6,
+build_version=1213_15e2792fcf

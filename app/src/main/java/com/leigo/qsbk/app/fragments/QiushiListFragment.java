@@ -100,11 +100,28 @@ public class QiushiListFragment extends BaseFragment implements ViewPager.OnPage
 
         @Override
         public Fragment getItem(int position) {
-            if(position == 1) {
-                return HotTextFragment.newInstance();
-            }else {
-                return SuperAwesomeCardFragment.newInstance(position);
+            Fragment fragment;
+            switch (position) {
+                case 0:
+                    fragment = SuggestFragment.newInstance();
+                    break;
+                case 1:
+                    fragment = HotTextFragment.newInstance();
+                    break;
+                case 2:
+                    fragment = HotImageFragment.newInstance();
+                    break;
+                case 3:
+                    fragment = LatestFragment.newInstance();
+                    break;
+                case 4:
+                    fragment = EssenceFragment.newInstance();
+                    break;
+                default:
+                    fragment = SuperAwesomeCardFragment.newInstance(position);
+                    break;
             }
+            return fragment;
         }
 
     }

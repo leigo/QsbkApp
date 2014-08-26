@@ -7,9 +7,11 @@ import android.support.v4.app.FragmentActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.leigo.qsbk.app.ConfigManager;
 import com.leigo.qsbk.app.R;
 import com.leigo.qsbk.app.activity.GuideActivity;
 import com.leigo.qsbk.app.activity.MainActivity;
+import com.leigo.qsbk.app.utils.DeviceUtils;
 
 /**
  * Created by Administrator on 2014/8/15.
@@ -20,9 +22,13 @@ public class SplashGroup extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.layout_splash);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.layout_splash);
+        init();
+    }
 
+    private void init() {
+        DeviceUtils.addShortcut(this);
         new Handler().postDelayed(new Task(), 2000L);
     }
 

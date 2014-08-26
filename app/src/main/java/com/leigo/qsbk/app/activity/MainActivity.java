@@ -150,7 +150,7 @@ public class MainActivity extends BaseActionBarActivity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            if ((System.currentTimeMillis() - mExitTime) > 800L) {
+            if ((System.currentTimeMillis() - mExitTime) > 2000L) {
                 Toast.makeText(this, "再按一次返回键退出", Toast.LENGTH_SHORT).show();
                 mExitTime = System.currentTimeMillis();
             } else {
