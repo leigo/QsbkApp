@@ -112,6 +112,10 @@ public class MainActivity extends BaseActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            //登录
+            case R.id.action_profile:
+                goProfile();
+                break;
             //反馈
             case R.id.action_feedback:
                 goFeedback();
@@ -125,6 +129,12 @@ public class MainActivity extends BaseActionBarActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    private void goProfile() {
+        startActivityForResult(new Intent(this, ActionBarLoginActivity.class), 88);
+        overridePendingTransition(R.anim.roll_up, R.anim.still_when_up);
     }
 
     private void goFeedback() {

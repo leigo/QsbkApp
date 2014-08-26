@@ -97,6 +97,64 @@
         <item name="icon2">@drawable/examine</item>
     </style>
 
+    <style name="day_login_bg">
+        <item name="android:background">@color/login_bg</item>
+    </style>
+
+    <style name="Login" parent="@style/Theme.Light">
+        <item name="login_bg">@style/day_login_bg</item>
+        <item name="login_btn_txt">@style/day_login_btn_style</item>
+        <item name="login_btn_txt_base">@style/login_btn_style_base</item>
+        <item name="login_btn_qq">@style/day_login_btn_qq_style</item>
+        <item name="login_btn_weibo">@style/day_login_btn_weibo_style</item>
+        <item name="login_btn_email">@style/day_login_btn_email_style</item>
+        <item name="login_base_txt">@style/day_login_base_txt</item>
+        <item name="login_split_line">@style/day_login_split_line</item>
+        <item name="edit_txt">@style/EditText</item>
+    </style>
+
+    <style name="login_btn_style_base">
+        <item name="android:textSize">18.0dip</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginLeft">4.0dip</item>
+        <item name="android:layout_marginRight">4.0dip</item>
+    </style>
+
+    <style name="day_login_btn_style" parent="@style/login_btn_style_base">
+        <item name="android:background">@drawable/login_btn_login_bg</item>
+    </style>
+
+    <style name="day_login_btn_qq_style" parent="@style/login_btn_style_base">
+        <item name="android:background">@drawable/login_btn_qq_bg</item>
+    </style>
+
+    <style name="day_login_btn_weibo_style" parent="@style/login_btn_style_base">
+        <item name="android:background">@drawable/login_btn_weibo_bg</item>
+    </style>
+
+    <style name="day_login_btn_email_style" parent="@style/login_btn_style_base">
+        <item name="android:background">@drawable/login_btn_email_bg</item>
+    </style>
+
+    <style name="day_login_base_txt">
+        <item name="android:textSize">16.5dip</item>
+        <item name="android:textColor">#ffb3b3b3</item>
+        <item name="android:background">@color/login_bg</item>
+    </style>
+
+    <style name="day_login_split_line">
+        <item name="android:background">@color/day_login_split_line</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:textSize">@dimen/g_txt_big</item>
+        <item name="android:textColor">@color/edit_info_edit_text_color</item>
+        <item name="android:background">@drawable/edit_text</item>
+        <item name="android:padding">10.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
     <style name="Setting" parent="@style/Day">
         <item name="setting_divide_line">@style/day_setting_divide_line</item>
         <item name="setting_head">@style/day_setting_head</item>

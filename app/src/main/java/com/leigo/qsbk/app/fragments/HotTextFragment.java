@@ -15,6 +15,7 @@ import com.google.gson.Gson;
 import com.leigo.qsbk.app.Constants;
 import com.leigo.qsbk.app.QsbkApp;
 import com.leigo.qsbk.app.R;
+import com.leigo.qsbk.app.activity.base.BaseArticleListViewFragment;
 import com.leigo.qsbk.app.adapter.ArticleAdapter;
 import com.leigo.qsbk.app.model.Article;
 import com.leigo.qsbk.app.model.QbBean;
@@ -28,7 +29,7 @@ import java.util.List;
  * 纯文
  * Created by Administrator on 2014/8/18.
  */
-public class HotTextFragment extends Fragment {
+public class HotTextFragment extends BaseArticleListViewFragment {
 
     private static final String TAG = HotTextFragment.class.getSimpleName();
 

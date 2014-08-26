@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="?login_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:id="@+id/id_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:paddingTop="20.0dip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip">
+
+                <RelativeLayout
+                    android:id="@+id/qqLayout"
+                    android:padding="10.0dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="50.0dip"
+                    style="?login_btn_qq">
+
+                    <ImageView
+                        android:background="@drawable/login_qq"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_alignParentLeft="true" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="QQ登录"
+                        android:layout_centerInParent="true"
+                        style="?login_btn_txt_base" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sinaLayout"
+                    android:padding="10.0dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_marginTop="20.0dip"
+                    style="?login_btn_weibo">
+
+                    <ImageView
+                        android:background="@drawable/login_weibo"
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_alignParentLeft="true" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="新浪微博登录"
+                        android:layout_centerInParent="true"
+                        style="?login_btn_txt_base" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginBottom="20.0dip">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1.0dip"
+                    android:layout_centerInParent="true"
+                    style="?login_split_line" />
+
+                <TextView
+                    android:paddingLeft="20.0dip"
+                    android:paddingRight="20.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="使用帐号糗百登录"
+                    android:layout_centerInParent="true"
+                    style="?login_base_txt" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="20.0dip">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/id_input_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/userName"
+                        android:hint="用户名/邮箱"
+                        android:singleLine="true"
+                        style="?edit_txt" />
+
+                    <EditText
+                        android:id="@+id/passwd"
+                        android:layout_marginTop="10.0dip"
+                        android:hint="密码"
+                        android:password="true"
+                        android:singleLine="true"
+                        android:inputType="textPassword"
+                        style="?edit_txt" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/id_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="50.0dip"
+                    android:layout_marginTop="30.0dip"
+                    android:text="登 录"
+                    style="?login_btn_txt" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:gravity="left"
+                        android:id="@+id/question"
+                        android:padding="10.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="忘记密码?"
+                        android:layout_weight="1.0"
+                        style="?login_base_txt" />
+
+                    <TextView
+                        android:gravity="right"
+                        android:id="@+id/register"
+                        android:padding="10.0dip"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:text="注册>"
+                        android:layout_weight="1.0"
+                        android:layout_alignParentBottom="true"
+                        style="?login_base_txt" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
